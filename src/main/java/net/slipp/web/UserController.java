@@ -17,7 +17,7 @@ public class UserController {
 	public String create(User user) { // String userId, int password,..쓰기귀찮으니까 User클래스로 객체를 생성해서 넣어줌
 		System.out.println("user : " + user);
 		users.add(user); // 저장
-		return "redirect:/list"; //회원가입후 list.html로이동
+		return "redirect:/list"; //회원가입후 list.html로이동ㄴ
 	}
 	
 	@GetMapping("/list")

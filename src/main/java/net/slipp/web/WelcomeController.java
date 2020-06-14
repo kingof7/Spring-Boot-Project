@@ -14,6 +14,6 @@ public class WelcomeController {
 		System.out.println("name: " + name + " age: " + age); //console에 찍힘
 		model.addAttribute("name", name); //model에 name이라는 이름으로 저장
 		model.addAttribute("age", age); //age라는 이름으로 브라우저에서 넘어온 age값을
-		return "welcome"; //templates 디렉토리 하위의 welcome.html호
+		return "welcome"; //templates 디렉토리 하위의 welcome.html호ㅇ
 	}
 }
