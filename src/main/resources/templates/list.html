@@ -11,8 +11,6 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
-
-<title>Hello, world!</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,12 +20,40 @@
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarText">			
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="#"></a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#"></a></li>
+			</ul>
 			<span class="navbar-text"> <a href="/form.html">회원가입</a></span>
-			<span class="navbar-text" style="margin-left: 10px; padding: 0px;"><a href="list">사용자 목록</a></span>
+			<span class="navbar-text" style="margin-left: 10px; padding: 0px;"><a href="/list">사용자 목록</a></span>
 		</div>
 	</nav>
-	<h1>Hello, Template</h1>
+	<div class="container">
+		<table class="table table-codensed">
+			
+			<thead>
+				<tr>
+					<th>사용자 아이디</th>
+					<th>이름</th>
+					<th>이메일</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#users}}
+				<tr>
+					<th scope="row">{{userId}}</th>
+					<td>{{name}}</td>
+					<td>{{email}}</td>
+				</tr>
+				{{/users}}				
+			</tbody>		
+		</table>	
+	</div>			
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
