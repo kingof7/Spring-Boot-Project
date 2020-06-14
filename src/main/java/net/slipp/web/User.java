@@ -25,7 +25,7 @@ public class User {
 	
 	//뿌려줌
 	@Override
-	public String toString() { // toString 없으면, 브라우저 리프레시 했을 때 콘솔창에 주소만 뜸ㄴ
+	public String toString() { // toString 없으면, 브라우저 리프레시 했을 때 콘솔창에 주소만 뜸
 		return "User [userId=" + userId + ", password=" + password + ", name=" + name + ", email=" + email + "]";
 	}
 	
