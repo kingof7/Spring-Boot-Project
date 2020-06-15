@@ -18,6 +18,7 @@ public class User {
 	private String password;
 	private String name;
 	private String email;
+	private String study;
 
 	public void setUserId(String userId) {
 		this.userId = userId;
@@ -35,10 +36,14 @@ public class User {
 		this.email = email;
 	}
 	
+	public void setStudy(String study) {
+		this.study = study;
+	}
+	
 	//뿌려줌
 	@Override
 	public String toString() { // toString 없으면, 브라우저 리프레시 했을 때 콘솔창에 주소만 뜸
-		return "User [userId=" + userId + ", password=" + password + ", name=" + name + ", email=" + email + "]";
+		return "User [userId=" + userId + ", password=" + password + ", name=" + name + ", email=" + email + ", study=" + study + "]";
 	}
 	
 	

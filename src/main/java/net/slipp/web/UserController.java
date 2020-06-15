@@ -34,4 +34,6 @@ public class UserController {
 		model.addAttribute("users", userRepository.findAll()); //사용자목록 저장, H2 DB에있는 데이터를 모두 담아서 리스트에 넣어줌 -> 맨위에 리스트컬렉션 필요없음
 		return "list";	
 	}
+	
+	
 }

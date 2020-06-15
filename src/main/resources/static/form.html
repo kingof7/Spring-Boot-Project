@@ -12,58 +12,88 @@
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
 
-<title>Hello, world!</title>
+<title>Sign Up</title>
+<link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="/">Slipp</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarText" aria-controls="navbarText"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarText">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"></a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="#"></a></li>
+<body style="margin: 0px auto; width: 80%;">
+	<header>
+		<div id="title">
+			<span> 당신에게 필요한 모임 - StudyM</span>
+		</div>
+		<div id="menu">
+			<a href="/"><span style="margin-left: 50px; color: green;"><b>스터디</b></span><span
+				style="color: red;"><b>엠</b></span></a>
+			<ul>
+				<li style="margin-left: 20px;"><a href="#">공지사항</a></li>
+				<li><a href="#">스터디게시판</a></li>
+				<li style="float: right; margin-right: 30px;"><a href="list">스터디원</a></li>
+				<li style="float: right;">|</li>
+				<li style="float: right;"><a href="/form.html">회원가입</a></li>
+				<li style="float: right;">|</li>
+				<div class="container">
+					<li style="float: right; padding: 10px; color:#0056b3;" type='button' data-toggle="modal"
+						data-target="#popUpWindow">로그인</li>
+
+					<div class="modal fade" id="popUpWindow">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<!-- header -->
+								<div class="modal-header" style="display:block; text-align:center;">									
+									<h3 class="modal-title">로그인</h3>
+								</div>
+								<!-- body -->
+								<div class="modal-header">
+									<form role="form">
+										<div class="form-group">
+											<input type="Id" name="userId" class="form-control" placeholder="Id" 
+												style="width: 465px;"/>
+											<input type="password" name="password" class="form-control"
+												placeholder="Password" />
+										</div>
+									</form>
+								</div>
+								<!-- footer -->
+								<div class="modal-footer">
+									<button class="btn btn-primary btn-block">Log In</button>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
 			</ul>
-			<span class="navbar-text"> <a href="/form.html">회원가입</a></span>
-			<span class="navbar-text" style="margin-left: 10px; padding: 0px;"><a href="list">사용자 목록</a></span>
-			
 		</div>
-	</nav>
-	<div class="container">
-	<br>
-	<h3>회원가입</h3><br>
-	
-	<!-- input 태그안에 name값을 key값으로 /create에 넘겨줄 것임 -->
-	<form action="/create" method="post">
-		<div class="form-group">
-			<label for="userId">Id</label> <input
-				type="text" class="form-control" name="userId"
-				aria-describedby="userId">
+	</header>
+	<div id="content">
+		<div class="container">
+			<br>
+			<h3>회원가입</h3>
+			<br>
+
+			<!-- input 태그안에 name값을 key값으로 /create에 넘겨줄 것임 -->
+			<form action="/create" method="post">
+				<div class="form-group">
+					<label for="userId">Id</label> <input type="text"
+						class="form-control" name="userId" aria-describedby="userId">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label> <input type="password"
+						class="form-control" name="password">
+				</div>
+				<div class="form-group">
+					<label for="name">이름</label> <input type="text"
+						class="form-control" name="name" aria-describedby="이름">
+				</div>
+				<div class="form-group">
+					<label for="name">이메일</label> <input type="email"
+						class="form-control" name="email" aria-describedby="이메일">
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
 		</div>
-		<div class="form-group">
-			<label for="password">Password</label> <input
-				type="password" class="form-control" name="password">
-		</div>
-		<div class="form-group">
-			<label for="name">이름</label> <input
-				type="text" class="form-control" name="name"
-				aria-describedby="이름">
-		</div>
-		<div class="form-group">
-			<label for="name">이메일</label> <input
-				type="email" class="form-control" name="email"
-				aria-describedby="이메일">
-		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
-	</form>
 	</div>
+
+
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -77,5 +107,9 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
+	<!-- script references -->
+	<script src="../js/jquery-2.2.0.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/scripts.js"></script>
 </body>
 </html>
